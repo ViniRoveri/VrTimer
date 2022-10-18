@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { Tempo } from "../../../common/classes";
 import PopupExcluirTempo from "./popupExcluirTempo";
 
-const PopupTempo = (props:{display:string,setDisplay:Dispatch<SetStateAction<string>>,copiaLocalStorage:Array<Tempo>,        setCopiaLocalStorage:Dispatch<SetStateAction<Tempo[]>>,tempoSelecionado:Tempo|undefined,indexTempoSelecionado:number|undefined,mudouTempo:boolean,setMudouTempo:Dispatch<SetStateAction<boolean>>,displayExcluir:string,setDisplayExcluir:Dispatch<SetStateAction<string>>})=>{
+const PopupTempo = (props:{display:string,setDisplay:Dispatch<SetStateAction<string>>,copiaLocalStorage:Array<Tempo>,        setCopiaLocalStorage:Dispatch<SetStateAction<Tempo[]>>,tempoSelecionado:Tempo|undefined,indexTempoSelecionado:number|undefined,mudouTempo:boolean,setMudouTempo:Dispatch<SetStateAction<boolean>>,displayExcluir:string,setDisplayExcluir:Dispatch<SetStateAction<string>>,botaoAtivoCopiar:string,setBotaoAtivoCopiar:Dispatch<SetStateAction<string>>})=>{
     let data = props.tempoSelecionado ? new Date(props.tempoSelecionado?.data) : new Date()
     let numeroTempo:number|string|undefined = props.tempoSelecionado?.tempo
 
@@ -18,7 +18,6 @@ const PopupTempo = (props:{display:string,setDisplay:Dispatch<SetStateAction<str
 
     const [botaoAtivoMais2,setBotaoAtivoMais2] = useState('')
     const [botaoAtivoDnf,setBotaoAtivoDnf] = useState('')
-    const [botaoAtivoCopiar,setBotaoAtivoCopiar] = useState('')
 
     useEffect(()=>{
         if(props.tempoSelecionado?.foiMais2){setBotaoAtivoMais2('botaoAtivo')}else{setBotaoAtivoMais2('')}
@@ -29,11 +28,11 @@ const PopupTempo = (props:{display:string,setDisplay:Dispatch<SetStateAction<str
         <>
         <section className="popupTempo" style={{animation: 'animaPopup .2s ease-out forwards',display:props.display}}>
             <h4 className="subtitulo">{props.tempoSelecionado?.foiDnf ? 'DNF' : numeroTempo}</h4>
-            <button className={`texto botaoCopiar ${botaoAtivoCopiar}`} aria-label="Copiar Tempo" onClick={()=>{
+            <button className={`texto botaoCopiar ${props.botaoAtivoCopiar}`} aria-label="Copiar Tempo" onClick={()=>{
                 navigator.clipboard.writeText
                 (`Tempo: ${props.tempoSelecionado?.foiDnf ? 'DNF' : numeroTempo}\r\nScramble: ${props.tempoSelecionado?.scramble}\r\nData: ${data.getDate()} / ${data.getMonth()+1} / ${data.getFullYear()} - ${data.getHours()}:${String(data.getMinutes()).padStart(2,'0')}:${String(data.getSeconds()).padStart(2,'0')}\r\nPenalidades: ${props.tempoSelecionado?.foiMais2?'+2':'Nenhuma'}`)
-                setBotaoAtivoCopiar('botaoAtivo')
-            }}>{botaoAtivoCopiar?'Copiado':'Copiar'}</button>
+                props.setBotaoAtivoCopiar('botaoAtivo')
+            }}>{props.botaoAtivoCopiar?'Copiado':'Copiar'}</button>
             <h5 className="texto">{props.tempoSelecionado?.scramble}</h5>
             <h6 className="texto">{`${data.getDate()} / ${data.getMonth()+1} / ${data.getFullYear()} - ${data.getHours()}:${String(data.getMinutes()).padStart(2,'0')}:${String(data.getSeconds()).padStart(2,'0')}`}</h6>
             <div>
@@ -76,10 +75,10 @@ const PopupTempo = (props:{display:string,setDisplay:Dispatch<SetStateAction<str
             </div>
             <button className="texto" onClick={()=>{
                 props.setDisplay('none')
-                setBotaoAtivoCopiar('')
+                props.setBotaoAtivoCopiar('')
             }}>Fechar</button>
         </section>
-            <PopupExcluirTempo display={props.displayExcluir} setDisplay={props.setDisplayExcluir} copiaLocalStorage={props.copiaLocalStorage} setCopiaLocalStorage={props.setCopiaLocalStorage} setDisplayPai={props.setDisplay} indexTempoSelecionado={props.indexTempoSelecionado} setBotaoAtivoCopiar={setBotaoAtivoCopiar}>{`Excluir o tempo ${props.tempoSelecionado?.foiDnf ? 'DNF' : numeroTempo}?`}</PopupExcluirTempo>
+        <PopupExcluirTempo display={props.displayExcluir} setDisplay={props.setDisplayExcluir} copiaLocalStorage={props.copiaLocalStorage} setCopiaLocalStorage={props.setCopiaLocalStorage} setDisplayPai={props.setDisplay} indexTempoSelecionado={props.indexTempoSelecionado} setBotaoAtivoCopiar={props.setBotaoAtivoCopiar}>{`Excluir o tempo ${props.tempoSelecionado?.foiDnf ? 'DNF' : numeroTempo}?`}</PopupExcluirTempo>
         </>
     )
 }

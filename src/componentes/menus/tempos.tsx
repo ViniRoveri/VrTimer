@@ -27,6 +27,8 @@ const Tempos = (props:{copiaLocalStorage:Array<Tempo>,setCopiaLocalStorage:Dispa
     const [tempoSelecionado,setTempoSelecionado] = useState<Tempo>()
     const [indexTempoSelecionado,setIndexTempoSelecionado] = useState<number>()
 
+    const [botaoAtivoCopiar,setBotaoAtivoCopiar] = useState('')
+
     return(
         <div className="tempos">
             <PopupExcluirTodos display={displayExcluirTodos} setDisplay={setDisplayExcluirTodos} copiaLocalStorage={props.copiaLocalStorage} setCopiaLocalStorage={props.setCopiaLocalStorage}>Excluir todos os tempos?</PopupExcluirTodos>
@@ -37,6 +39,7 @@ const Tempos = (props:{copiaLocalStorage:Array<Tempo>,setCopiaLocalStorage:Dispa
                     setDisplayTempo('none')
                     setDisplayExcluirTempo('none')
                     setDisplayExcluirTodos('inline-block')
+                    setBotaoAtivoCopiar('')
                 }}>Excluir tempos</button>
             </span>
             <div style={{height:alturaDiv}}>
@@ -66,7 +69,7 @@ const Tempos = (props:{copiaLocalStorage:Array<Tempo>,setCopiaLocalStorage:Dispa
                     </div>
                     )
                 })}
-                <PopupTempo display={displayTempo} setDisplay={setDisplayTempo} copiaLocalStorage={props.copiaLocalStorage} setCopiaLocalStorage={props.setCopiaLocalStorage} tempoSelecionado={tempoSelecionado} indexTempoSelecionado={indexTempoSelecionado} mudouTempo={props.mudouTempo} setMudouTempo={props.setMudouTempo} displayExcluir={displayExcluirTempo} setDisplayExcluir={setDisplayExcluirTempo}/>
+                <PopupTempo display={displayTempo} setDisplay={setDisplayTempo} copiaLocalStorage={props.copiaLocalStorage} setCopiaLocalStorage={props.setCopiaLocalStorage} tempoSelecionado={tempoSelecionado} indexTempoSelecionado={indexTempoSelecionado} mudouTempo={props.mudouTempo} setMudouTempo={props.setMudouTempo} displayExcluir={displayExcluirTempo} setDisplayExcluir={setDisplayExcluirTempo} botaoAtivoCopiar={botaoAtivoCopiar} setBotaoAtivoCopiar={setBotaoAtivoCopiar}/>
                 <span className={`${naoHaTempos} texto`}>Ainda Não Há Tempos</span>
             </div>
         </div>
