@@ -1,5 +1,5 @@
 .aside{
-    height: 80px;
+    height: 40px;
     position: fixed;
     left: calc(100vw - 40px);
     top: 0;
@@ -8,11 +8,11 @@
 .aside-menus{
     background-color: var(--laranja);
     border-top: 1px solid var(--laranja-escuro);
-    height: calc(100vh - 80px);
+    height: calc(100vh - 40px);
     left: 100vw;
     overflow-y: hidden;
     position: fixed;
-    top: 80px;
+    top: 40px;
     width: 100vw;
 }
 
@@ -20,7 +20,7 @@
     border-left: 1px solid var(--laranja-claro);
     cursor: pointer;
     padding: 20px 0;
-    width: 40px;
+    width: 20px;
 }
 
 .tempos{

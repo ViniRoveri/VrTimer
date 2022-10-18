@@ -1,7 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useState } from 'react';
 import './App.css';
 import { Tempo } from './common/classes';
-import Footer from './componentes/footer';
 import Header from './componentes/header';
 import Main from './componentes/main/main';
 import MenuPrincipal from './componentes/menus/menu-principal';
@@ -30,7 +29,6 @@ function App(){
     <Header/>
     <MenuPrincipal copiaLocalStorage={copiaLocalStorage} setCopiaLocalStorage={setCopiaLocalStorage}/>
     <Main salvaLocalStorage={salvaLocalStorage}/>
-    <Footer/>
     </>
   );
 }
