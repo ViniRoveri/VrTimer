@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Inter:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&display=swap');
+@import url(css/animacoes.css);
+@import url(css/header.css);
+@import url(css/popups.css);
+@import url(css/menus.css);
+@import url(css/main.css);
+@import url(css/footer.css);
+
+:root{
+    --laranja-claro: #fff5eb;
+    --laranja: #ff9316;
+    --laranja-escuro: #140c02;
+    --texto: 'Inter', sans-serif;
+    --titulo: 'Alata', sans-serif;
+    --relogio: 'Azeret Mono', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: var(--laranja-escuro);
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.texto{
+    color: var(--laranja-claro);
+    font-family: var(--texto);
+    font-size: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.subtitulo{
+    color: var(--laranja-claro);
+    font-family: var(--titulo);
+    font-size: 25px; 
 }
 
-.App-link {
-  color: #61dafb;
+.titulo{
+    color: var(--laranja-claro);
+    font-family: var(--titulo);
+    font-size: 27px; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.invisivel{
+    display: none;
+}
+
+.naoSelecionavel{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+	height: 4px;
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background: #251604;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background: #7c480c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #4e2d08;
+}
+
+@media (min-width:426px){
+    .texto{
+        font-size: 24px;
+    }
+    
+    .subtitulo{
+        font-size: 33px; 
+    }
+}
+
+@media (min-width:769px){
+    .texto{
+        font-size: 32px;
+    }
+    
+    .subtitulo{
+        font-size: 41px; 
+    }
+}
+
+@media (min-width:1025px){
+    .texto{
+        font-size: 40px;
+    }
+    
+    .subtitulo{
+        font-size: 49px; 
+    }
 }

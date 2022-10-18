@@ -1,0 +1,45 @@
+@keyframes animaMenuFechado{
+    0%{
+        transform: translateX(-100vw);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.aside-menus.fechado{
+    animation: animaMenuFechado .5s ease-out forwards;
+}
+
+@keyframes animaMenuAberto{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+
+.aside-menus.aberto{
+    animation: animaMenuAberto .5s ease-out forwards;
+}
+
+@keyframes animaPopup{
+    0%{
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    85%{
+        transform: translateY(-2px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width:1025px){
+    .aside-menus.fechado,.aside-menus.aside-menus.aberto{
+        animation: none;
+    } 
+}

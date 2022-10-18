@@ -1,0 +1,19 @@
+.footer{
+    padding: 4px 0;
+    text-align: center;
+}
+
+.footer p{
+    color: var(--laranja);
+    font-size: 12px;
+}
+
+.footer p::before{
+    content: "© "
+}
+
+@media (min-width:1025px){
+    .footer{
+        width: calc(100vw - 300px);
+    }
+}

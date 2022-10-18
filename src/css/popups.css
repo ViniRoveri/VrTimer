@@ -1,0 +1,141 @@
+.popupExcluir,.popupTempo{
+    background-color: var(--laranja-escuro);
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.4);
+    color: var(--laranja-claro);
+    height: min-content;
+    margin: auto;
+    max-width: 412px;
+    padding: 16px;
+    position: absolute;
+    text-align: center;
+    width: 96%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.popupExcluir{
+    z-index: 20;
+}
+
+.popupTempo{
+    z-index: 10;
+}
+
+.popupExcluir>button,.popupTempo>button,.popupTempo>div>button{
+    background-color: transparent;
+    border: 1px solid var(--laranja-claro);
+    border-radius: 10px;
+    color: var(--laranja-claro);
+    cursor: pointer;
+    padding: 4px 14%;
+    margin: 0 16px;
+    outline: none;
+}
+
+.popupExcluir>button{
+    margin-top: 16px;
+}
+
+.popupExcluir>button:active{
+    transform: scale(.96);
+}
+
+.popupTempo>h4{
+    font-size: 50px;
+    margin-bottom: 16px;
+}
+
+button.botaoCopiar.texto{
+    font-size: 14px;
+    margin: 0;
+    padding: 4px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.popupTempo>h5{
+    font-size: 20px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.popupTempo>h6{
+    margin-bottom: 16px;
+}
+
+.popupTempo>div{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.popupTempo>div>button{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 30%;
+}
+
+.popupTempo>div>button.botaoAtivo,.botaoExcluir:active,button.botaoCopiar.botaoAtivo{
+    background-color: var(--laranja);
+    border-color: var(--laranja-escuro);
+    color: var(--laranja-escuro);
+}
+
+@media (min-width:426px){
+    .aside-menus .popupTempo>h4{
+        font-size: 58px;
+    }
+
+    button.botaoCopiar.texto{
+        font-size: 16px;
+    }
+
+    .aside-menus .popupTempo>h5{
+        font-size: 28px;
+    }
+
+    .aside-menus .popupTempo>h6{
+        font-size: 24px;
+    }
+
+    .popupTempo>div>button,.popupTempo>button:not(.botaoCopiar){
+        font-size: 24px;
+    }
+}
+
+@media (min-width:769px){
+    .popupExcluir>button{
+        padding: 4px 12%;
+    }
+
+    button.botaoCopiar.texto{
+        font-size: 18px;
+    }
+}
+
+@media (min-width:1025px){
+    .aside-menus .popupTempo>h4{
+        font-size: 44px;
+    }
+
+    button.botaoCopiar.texto{
+        font-size: 14px;
+    }
+
+    .aside-menus .popupTempo>h5{
+        font-size: 20px;
+    }
+
+    .popupTempo>div>button,.popupTempo>button:not(.botaoCopiar){
+        font-size: 16px;
+    }
+}

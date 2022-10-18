@@ -1,0 +1,91 @@
+.main{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px);
+    justify-content: space-between;
+    transition: .2s all;
+}
+
+.main.duranteSolve{
+    background-color: var(--laranja-escuro);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+
+.main div.duranteSolve,.scramble.duranteSolve{
+    height: 0;
+    opacity: 0;
+}
+
+.scramble{
+    line-height: 1.22;
+    padding: 16px 2% 0;
+    text-align: center;
+    transition: .2s all;
+}
+
+.scramble p{
+    font-size: 22px;
+}
+
+.cronometro{
+    padding: 8px;
+}
+
+.cronometro>span{
+    display: none;
+    margin-bottom: 16px;
+    text-align: center;
+    width: 100%;
+}
+
+.cronometro>span.duranteInspecao{
+    display: inline-block;
+}
+
+.cronometro h2{
+    color: var(--laranja-claro);
+    font-family: var(--relogio);
+    font-size: 58px;
+    text-align: center;
+}
+
+.main div{
+    background-color: var(--laranja);
+    height: 1px;
+    transition: .2s all;
+    width: 100%;
+}
+
+@media (min-width:426px){
+    .scramble p{
+        font-size: 30px;
+    }
+
+    .cronometro h2{
+        font-size: 77px;
+    }
+}
+
+@media (min-width:769px){
+    .scramble p{
+        font-size: 38px;
+    }
+
+    .cronometro h2{
+        font-size: 116px;
+    }
+}
+
+@media (min-width:1025px){
+    .main{
+        width: calc(100vw - 300px);
+    }
+
+    .scramble p{
+        font-size: 46px;
+    }
+}
