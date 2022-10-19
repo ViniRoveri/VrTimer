@@ -35,7 +35,7 @@ body{
 .titulo{
     color: var(--laranja-claro);
     font-family: var(--titulo);
-    font-size: 27px; 
+    font-size: 20px; 
 }
 
 .invisivel{
@@ -69,32 +69,12 @@ body{
 	background: #4e2d08;
 }
 
-@media (min-width:426px){
-    .texto{
-        font-size: 24px;
-    }
-    
-    .subtitulo{
-        font-size: 33px; 
-    }
-}
-
 @media (min-width:769px){
     .texto{
-        font-size: 32px;
+        font-size: 20px;
     }
-    
-    .subtitulo{
-        font-size: 41px; 
-    }
-}
 
-@media (min-width:1025px){
-    .texto{
-        font-size: 40px;
-    }
-    
     .subtitulo{
-        font-size: 49px; 
+        font-size: 29px; 
     }
 }

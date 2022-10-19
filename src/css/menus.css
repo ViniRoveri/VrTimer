@@ -18,16 +18,17 @@
 
 .aside img{
     border-left: 1px solid var(--laranja-claro);
+    box-sizing: border-box;
     cursor: pointer;
-    padding: 20px 0;
-    width: 20px;
+    height: 40px;
+    width: 40px;
 }
 
 .tempos{
     border-bottom: 1px solid var(--laranja-escuro);
     box-sizing: border-box;
-    height: calc(100% - 140px);
-    padding: 5% 2%;
+    height: 70%;
+    padding: 8px 2% 5%;
     position: relative;
 }
 
@@ -103,7 +104,7 @@
 
 .medias{
     box-sizing: border-box;
-    height: 140px;
+    height: 30%;
     padding: 0 2%;
 }
 
@@ -157,28 +158,6 @@
     .medias>span>div,.medias>div>div,.tempos>span>p,.tempos>span>button{
         font-size: 16px;
     }
-
-    .tempos{
-        height: calc(100% - 160px);
-    }
-
-    .medias{
-        height: 160px;
-    }
-}
-
-@media (min-width:769px){
-    .medias>span>div,.medias>div>div,.tempos>span>p,.tempos>span>button{
-        font-size: 20px;
-    }
-
-    .tempos{
-        height: calc(100% - 180px);
-    }
-
-    .medias{
-        height: 180px;
-    }
 }
 
 @media (min-width:1025px){
@@ -217,5 +196,55 @@
     .medias>div>div{
         margin: 0 2px;
         width: 23%;
+    }
+}
+
+
+@media (min-height:1080px){
+    .tempos{
+        height: 85%;
+    }
+
+    .medias{
+        height: 15%;
+    }
+}
+@media (max-height:1080px){
+    .tempos{
+        height: 85%;
+    }
+
+    .medias{
+        height: 15%;
+    }
+}
+
+@media (max-height:1025px){
+    .tempos{
+        height: 80%;
+    }
+
+    .medias{
+        height: 20%;
+    }
+}
+
+@media (max-height:769px){
+    .tempos{
+        height: 62%;
+    }
+
+    .medias{
+        height: 38%;
+    }
+}
+
+@media (max-height:425px){
+    .tempos{
+        height: 55%;
+    }
+
+    .medias{
+        height: 45%;
     }
 }
