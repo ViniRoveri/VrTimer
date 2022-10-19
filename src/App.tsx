@@ -20,8 +20,9 @@ function App(){
   },[])
 
   function salvaLocalStorage(tempo:number,scramble:string,data:Date,foiMais2:boolean,foiDnf:boolean,foiDnfInspecao:boolean){
-    setCopiaLocalStorage([...copiaLocalStorage,new Tempo(tempo,scramble,data,foiMais2,foiDnf,foiDnfInspecao)]);
-    localStorage.setItem('Tempos',JSON.stringify(copiaLocalStorage))
+    let tempoNovo = new Tempo(tempo,scramble,data,foiMais2,foiDnf,foiDnfInspecao)
+    localStorage.setItem('Tempos',JSON.stringify([...copiaLocalStorage,tempoNovo]))
+    setCopiaLocalStorage([...copiaLocalStorage,tempoNovo]);
   }
   
   return (
