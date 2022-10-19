@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/VrTimer/static/css/main.8cbf35fe.css",
+    "main.css": "/VrTimer/static/css/main.eb603eeb.css",
     "main.js": "/VrTimer/static/js/main.3ef69a42.js",
     "index.html": "/VrTimer/index.html",
-    "main.8cbf35fe.css.map": "/VrTimer/static/css/main.8cbf35fe.css.map",
+    "main.eb603eeb.css.map": "/VrTimer/static/css/main.eb603eeb.css.map",
     "main.3ef69a42.js.map": "/VrTimer/static/js/main.3ef69a42.js.map"
   },
   "entrypoints": [
-    "static/css/main.8cbf35fe.css",
+    "static/css/main.eb603eeb.css",
     "static/js/main.3ef69a42.js"
   ]
 }
