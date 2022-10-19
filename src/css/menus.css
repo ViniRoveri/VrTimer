@@ -249,3 +249,13 @@
         height: 45%;
     }
 }
+
+@media (max-height:270px){
+    .tempos{
+        height: 100%;
+    }
+
+    .medias{
+        display: none;
+    }
+}
