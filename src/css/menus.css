@@ -250,7 +250,7 @@
     }
 }
 
-@media (max-height:270px){
+@media (max-height:400px){
     .tempos{
         height: 100%;
     }
