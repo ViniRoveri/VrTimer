@@ -2,6 +2,8 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react"
 import { Tempo } from "../../common/classes"
 import Medias from "./medias"
 import Tempos from "./tempos"
+import arrowLeft from '../../img/Arrows/Arrow-Left.svg'
+import arrowRight from '../../img/Arrows/Arrow-Right.svg'
 
 const MenuPrincipal = (props:{copiaLocalStorage:Array<Tempo>,setCopiaLocalStorage:Dispatch<SetStateAction<Tempo[]>>})=>{
     const [classeArrowLeft,setClasseArrowLeft] = useState('')
@@ -16,12 +18,12 @@ const MenuPrincipal = (props:{copiaLocalStorage:Array<Tempo>,setCopiaLocalStorag
     
     return(
         <aside className="aside">
-            <img src="img/Arrows/Arrow-Left.svg" alt="Mostrar Menu" aria-label="Mostrar Menu" className={classeArrowLeft} onClick={()=>{
+            <img src={arrowLeft} alt="Mostrar Menu" aria-label="Mostrar Menu" className={classeArrowLeft} onClick={()=>{
                 setClasseArrowLeft('invisivel');
                 setClasseArrowRight('');
                 setAberturaMenu('aberto')
             }}/>
-            <img src="img/Arrows/Arrow-Right.svg" alt="Esconder Menu" aria-label="Esconder Menu" className={classeArrowRight} onClick={()=>{
+            <img src={arrowRight} alt="Esconder Menu" aria-label="Esconder Menu" className={classeArrowRight} onClick={()=>{
                 setClasseArrowRight('invisivel');
                 setClasseArrowLeft('');
                 setAberturaMenu('fechado')

@@ -2,10 +2,10 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { Tempo } from "../../common/classes";
 import PopupExcluirTodos from "./popups/popupExcluirTodos";
 import PopupTempo from "./popups/popupTempo";
+var alturaDiv:string;
+var naoHaTempos:string;
 
 const Tempos = (props:{copiaLocalStorage:Array<Tempo>,setCopiaLocalStorage:Dispatch<SetStateAction<Tempo[]>>,aberturaMenu:string,mudouTempo:boolean,setMudouTempo:Dispatch<SetStateAction<boolean>>})=>{
-    var alturaDiv:string;
-    var naoHaTempos:string;
     if(props.copiaLocalStorage.length<=0){
         alturaDiv = 'calc(100% - 41px)';
         naoHaTempos = ''
