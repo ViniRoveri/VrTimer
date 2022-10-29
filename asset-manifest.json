@@ -1,13 +1,16 @@
 {
   "files": {
     "main.css": "/VrTimer/static/css/main.3351af5f.css",
-    "main.js": "/VrTimer/static/js/main.5a35e6b7.js",
+    "main.js": "/VrTimer/static/js/main.4eccb809.js",
+    "static/media/Logo-Vini-Roveri-100.png": "/VrTimer/static/media/Logo-Vini-Roveri-100.5d4a609db88d3ca32ab8.png",
+    "static/media/Arrow-Left.svg": "/VrTimer/static/media/Arrow-Left.c44926b388170e42a67e3f96670ccae2.svg",
+    "static/media/Arrow-Right.svg": "/VrTimer/static/media/Arrow-Right.f0607b2fb1763c9cbb5666c469cc9b80.svg",
     "index.html": "/VrTimer/index.html",
     "main.3351af5f.css.map": "/VrTimer/static/css/main.3351af5f.css.map",
-    "main.5a35e6b7.js.map": "/VrTimer/static/js/main.5a35e6b7.js.map"
+    "main.4eccb809.js.map": "/VrTimer/static/js/main.4eccb809.js.map"
   },
   "entrypoints": [
     "static/css/main.3351af5f.css",
-    "static/js/main.5a35e6b7.js"
+    "static/js/main.4eccb809.js"
   ]
 }
