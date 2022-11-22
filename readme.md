@@ -1,6 +1,6 @@
 ![Foto da tela inicial](./src/img/Capa%20VR%20Timer.png)
 
-# VR Timer
+# VR Timer ([Link do site](https://viniroveri.github.io/VrTimer/))
 
 
 ## O que é isso?
@@ -37,3 +37,4 @@ Pra não ter repetição de código eu criei um função genérica que identific
 
 - ### Gerador de embaralhamentos
 
+Este desafio foi separado em duas etapas, a primeira era descobrir como computadores geram embaralhamentos, e a segunda replicar isto. O desafio se tornou maior por não ter na internet nenhum gerador de embaralhamento escrito em JavaScript para eu me basear, por isso eu fui atrás de entender a lógica teórica por trás de toda a geração, e com minhas própias palavras (ou meus própios códigos) eu consegui recriar perfeitamente os geradores usados profissionalmente.
