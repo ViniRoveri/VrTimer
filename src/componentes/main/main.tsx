@@ -58,8 +58,10 @@ const Main = (props:{salvaLocalStorage:(tempo:number,scramble:string,data:Date,f
 
   useEffect(()=>{
     if(timerAtivo){
+      const dataInicio = new Date().getTime()
+
       idIntervalTimer = setInterval(()=>{
-        numTimer += 0.01;
+        numTimer = (new Date().getTime() - dataInicio) / 1000;
         if(numTimer<60){
           setDisplayTimer(numTimer);
         }else{
